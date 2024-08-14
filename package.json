@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "build": "npm install && tsc",
+        "build": "npm install && npm install -g prisma && tsc",
         "start": "npm install && npx prisma generate && npx prisma migrate deploy && node dist/server.js",
         "dev": "ts-node src/server.ts",
         "migrate": "npx prisma migrate dev"
@@ -22,6 +22,7 @@
         "pg-hstore": "^2.3.4"
     },
     "devDependencies": {
+        "@flydotio/dockerfile": "^0.5.8",
         "@types/bcrypt": "^5.0.2",
         "@types/express": "^4.17.21",
         "@types/node": "^22.2.0",
